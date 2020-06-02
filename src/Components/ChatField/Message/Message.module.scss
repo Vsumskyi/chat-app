@@ -1,0 +1,62 @@
+@import 'vars.scss';
+
+//TODO concat styles
+.Message {
+  padding: 0 10px;
+  .messageOut {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    p {
+      text-align: right;
+      background: $messageout;
+      margin-left: auto;
+      color:black;
+      padding: 8px;
+      border-radius: 15px;
+      max-width: 70%;
+      position: relative;
+
+    }
+    span {
+      position: absolute;
+      bottom: -20px;
+      right: 5px;
+      font-size: 12px;
+      white-space: nowrap;
+      
+      }
+  }
+  .messageIn {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 10px;
+    p {
+      display: inline-block;
+      text-align: left;
+      background: $messagein;
+      margin-right: auto;
+      color: #fff;
+      padding: 8px;
+      border-radius: 15px;
+      max-width: 70%;
+      position: relative;
+    }
+    span {
+        position: absolute;
+        bottom: -20px;
+        left: 5px;
+        font-size: 12px;
+        color: black;
+        white-space: nowrap;
+        
+      }
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+}
+

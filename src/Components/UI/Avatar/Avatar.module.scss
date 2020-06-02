@@ -1,0 +1,17 @@
+@import 'vars.scss';
+
+.Avatar {
+  margin-right: 10px;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+}
+
+.withoutImg {
+  background: darken($uibgc, 10%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: darken($uibgc, 50%);
+}

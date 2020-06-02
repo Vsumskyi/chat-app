@@ -1,0 +1,29 @@
+@import 'vars.scss';
+
+.MemberItem {
+  border-bottom: 1px solid $uibgc;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 0;
+  background: $memberbgc;
+  cursor: pointer;
+  .memberText {
+    margin-right: auto;
+    p {
+      margin: 0;
+      text-align: left;
+    }
+    h4 {
+      margin: 0;
+      text-transform: capitalize;
+      font-weight: 500;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+  }
+  span {
+    font-size: 12px;
+    margin-right: 10px;
+  }
+}

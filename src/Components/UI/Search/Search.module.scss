@@ -1,0 +1,30 @@
+@import 'vars.scss';
+
+.Search {
+  display: flex;
+  align-items: baseline;
+  padding-left: 10px;
+  width: 90%;
+  border-radius: 40px;
+  border: 1px solid darken($uibgc, 10%);
+  margin-top: 25px;
+  background: lighten($uibgc, 2%);
+  i {
+    order: -1;
+    transition: opacity .25s ease;
+  }
+  input {
+    width: 100%;
+    border: 0; 
+    padding: 10px;
+    background: transparent;
+    &:focus {
+      outline: none;
+    }
+    &:focus + i {
+      opacity: 0;
+    }
+    
+  }
+}
+
