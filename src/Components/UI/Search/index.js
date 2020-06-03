@@ -1,3 +1,9 @@
-import {SearchComponent} from './Search'
+import { SearchComponent } from './Search'
+import { connect } from 'react-redux'
+import { filterDialogsAction } from 'Redux/Actions/memberList'
 
-export default SearchComponent
+const actions = {
+	filterDialogs: filterDialogsAction
+}
+
+export const Search = connect(null, actions)(SearchComponent)

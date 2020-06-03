@@ -1,0 +1,11 @@
+@import 'vars.scss';
+
+.Background {
+  margin: 0 auto;
+  text-align: center;
+  i {
+    font-size: 45px;
+    color: $mainClr;
+    display: block;
+  }
+}

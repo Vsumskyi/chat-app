@@ -5,8 +5,10 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 20px 0;
+  padding: 20px 5px;
   background: $memberbgc;
+  color: black;
+  text-decoration: none;
   cursor: pointer;
   .memberText {
     margin-right: auto;
@@ -19,11 +21,15 @@
       text-transform: capitalize;
       font-weight: 500;
       font-size: 14px;
-      white-space: nowrap;
+      white-space: pre-line;
     }
   }
   span {
     font-size: 12px;
     margin-right: 10px;
   }
+}
+
+.activeDialog {
+  background: $mainClr;
 }
