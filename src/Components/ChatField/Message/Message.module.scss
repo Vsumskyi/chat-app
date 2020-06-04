@@ -1,11 +1,10 @@
 @import 'vars.scss';
 
 .Message {
-  padding: 20px 5px;
+  padding: 5px 5px;
   .messageOut, .messageIn {
     display: flex;
     align-items: center;
-    margin-bottom: 10px; 
     flex-wrap: wrap; 
     p {
       padding: 8px; 
@@ -30,10 +29,6 @@
         left: 5px;
         color: black;
       }
-    }
-    img {
-      width: 20px;
-      height: 20px;
     }
   }
   .messageOut {

@@ -6,6 +6,7 @@
   justify-content: space-between;
   width: 100%;
   padding: 20px 5px;
+  max-height: 100px;
   background: $memberbgc;
   color: black;
   text-decoration: none;
@@ -32,4 +33,5 @@
 
 .activeDialog {
   background: $mainClr;
+  color: #fff;
 }

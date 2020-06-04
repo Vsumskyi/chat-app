@@ -5,11 +5,19 @@
   width: 30%;
   overflow-y: scroll;
   overflow-x: hidden;
-  background-color: $uibgc;
+  // background-color: $uibgc;
+  background-color: #fff;
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   border-right: 1px solid darken($uibgc, 10%);
+  h3 {
+    color: $mainClr;
+    margin: 30px 5px;
+    font-weight: 300;
+    font-size: 22px;
+  }
   
   &::-webkit-scrollbar {  // hide scrollbar
     width: 0;

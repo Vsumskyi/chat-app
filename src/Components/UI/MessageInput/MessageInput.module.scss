@@ -2,6 +2,8 @@
 
 .MessageInputLayout {
   display: flex;
+  position: sticky;
+  bottom: 0;
   justify-content: center;
   background: darken($uibgc, 2%);
   padding: 20px;

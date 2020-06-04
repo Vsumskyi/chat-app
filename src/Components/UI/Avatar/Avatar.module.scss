@@ -1,14 +1,31 @@
 @import 'vars.scss';
 
 .Avatar {
-  margin-right: 10px;
+  position: relative;
   height: 40px;
   width: 40px;
-  border-radius: 100%;
+  margin-right: 10px;
+  img {
+    margin-right: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+  }
+  i {
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    color: $onlineClr;
+  }
 }
 
 .withoutImg {
   background: darken($uibgc, 10%);
+  margin-right: 10px;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  margin-right: 10px;
   display: flex;
   justify-content: center;
   align-items: center;

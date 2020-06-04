@@ -1,12 +1,22 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import classes from './Avatar.module.scss'
 
-export const Avatar = ({ image, alt }) =>
+export const Avatar = ({ image, alt, isOnline = false }) =>
 	image ? (
-		<img className={classes.Avatar} src={image} alt={alt} />
+		<div className={classes.Avatar}>
+			{!isOnline? <i className="far fa-check-circle"></i>: null}
+		<img  src={image} alt={alt} />
+		</div>
 	) : (
-		<div className={`${classes.Avatar} ${classes.withoutImg}`}>
+		<div className={classes.withoutImg}>
 			<i className="fas fa-user"></i>
 		</div>
 	)
+
+	Avatar.propTypes = {
+		image: PropTypes.string,
+		alt: PropTypes.string,
+		isOnline: PropTypes.bool
+	}

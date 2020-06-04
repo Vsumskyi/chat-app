@@ -1,3 +1,17 @@
 import { MessageInputComponent } from './MessageInput'
+import { connect } from 'react-redux'
+import { sendMessageAction } from 'Redux/Actions/chat'
+import { getMessageAction } from '../../../Redux/Actions/chat'
 
-export default MessageInputComponent
+// const mapStateToProps = state => {
+// 	return {
+
+// 	}
+// }
+
+const actions = {
+	sendMessage: sendMessageAction,
+	getMessage: getMessageAction
+}
+
+export const MessageInput = connect(null, actions)(MessageInputComponent)

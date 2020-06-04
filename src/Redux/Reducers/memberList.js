@@ -1,22 +1,22 @@
-import { FILTERED_MESSAGE, FETCH_MEMBERS } from '../Actions/actionTypes'
+import {
+	FILTERED_MESSAGE,
+	FETCH_MEMBERS,
+	SEND_MESSAGE,
+	GET_MESSAGE
+} from '../Actions/actionTypes'
 import { createReducer } from 'Helpers/reducer'
 
 const initialState = {
 	memberItems: [],
 	loading: true,
-  tracker: '',
-	user: {
-		name: 'шарик шарикович',
-		id: 12,
-		image:
-			'https://heroeswm-uvz.at.ua/imgs/katalog_statey/tumblr_m07iyfLy0F1qce1ag.jpg'
-	},
+	tracker: '',
+	user: {}
 }
 
 const memberList = {
 	[FILTERED_MESSAGE]: (state = initialState, action) => {
 		return {
-      ...state,
+			...state,
 			tracker: action.key
 		}
 	},
@@ -24,8 +24,33 @@ const memberList = {
 		return {
 			...state,
 			memberItems: action.members,
+			user: action.user,
 			loading: false
 		}
 	},
+	[SEND_MESSAGE]: (state = initialState, action) => {
+		return {
+			...state,
+			memberItems: state.memberItems.map(i => {
+				if (i.id === action.id) {
+					i.sortTime = action.sortTime
+					return i
+				}
+				return i
+			})
+		}
+	},
+	[GET_MESSAGE]: (state = initialState, action) => {
+		return {
+			...state,
+			memberItems: state.memberItems.map(i => {
+				if (i.id === action.id) {
+					i.sortTime = action.sortTime
+					return i
+				}
+				return i
+			})
+		}
+	}
 }
 export default createReducer(initialState, memberList)
