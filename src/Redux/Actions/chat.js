@@ -18,6 +18,7 @@ export const sendMessageAction = (messageValue, id) => {
 			message: messageValue,
 			messageFromMe: true
 		}
+		await axiosBaseUrl.put(`members/${id}/sortTime.json`, date.getTime())
 		await axiosBaseUrl.post(`members/${id}/history.json`, message)
 		return dispatch(sendMessage(message, id, date.getTime()))
 	}
@@ -44,6 +45,7 @@ export const getMessageAction = id => {
 			message: joke.data.value,
 			messageFromMe: false
 		}
+		await axiosBaseUrl.put(`members/${id}/sortTime.json`, date.getTime())
 		await axiosBaseUrl.post(`members/${id}/history.json`, message)
 		return dispatch(getMessage(message, id, date.getTime()))
 	}
