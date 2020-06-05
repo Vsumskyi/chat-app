@@ -1,7 +1,8 @@
 import {
 	CURRENT_MEMBER,
 	SEND_MESSAGE,
-	GET_MESSAGE
+	GET_MESSAGE,
+	FETCH_MEMBERS
 } from '../Actions/actionTypes'
 import { createReducer } from 'Helpers/reducer'
 
@@ -10,6 +11,12 @@ const initialState = {
 }
 
 const chat = {
+	[FETCH_MEMBERS]: (state = initialState, action) => {
+		return {
+			...state,
+			currentDialog: action.currentDialog
+		}
+	},
 	[CURRENT_MEMBER]: (state = initialState, action) => {
 		return {
 			...state,

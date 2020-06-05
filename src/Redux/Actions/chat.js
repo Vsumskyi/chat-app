@@ -18,10 +18,11 @@ export const sendMessageAction = (messageValue, id) => {
 			message: messageValue,
 			messageFromMe: true
 		}
-		// await axiosBaseUrl.post(`members/${id}/history.json`, message)
+		await axiosBaseUrl.post(`members/${id}/history.json`, message)
 		return dispatch(sendMessage(message, id, date.getTime()))
 	}
 }
+
 export const sendMessage = (message, id, sortTime) => ({
 	type: SEND_MESSAGE,
 	message,
@@ -43,7 +44,7 @@ export const getMessageAction = id => {
 			message: joke.data.value,
 			messageFromMe: false
 		}
-		// await axiosBaseUrl.post(`members/${id}/history.json`, message)
+		await axiosBaseUrl.post(`members/${id}/history.json`, message)
 		return dispatch(getMessage(message, id, date.getTime()))
 	}
 }

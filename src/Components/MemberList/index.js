@@ -4,7 +4,7 @@ import { MemberListComponent } from './MemberList'
 import { fetchMembersAction } from 'Redux/Actions/memberList'
 import { currentMemberAction } from 'Redux/Actions/chat'
 
-const sorteMembers = (members, tarcker) => {
+const sortMembers = (members, tarcker) => {
 	members.sort((a, b) => b.sortTime - a.sortTime)
 	return members.filter(track =>
 		track.name.toLowerCase().includes(tarcker.toLowerCase())
@@ -12,7 +12,7 @@ const sorteMembers = (members, tarcker) => {
 }
 const mapStateToProps = state => {
 	return {
-		memberItems: sorteMembers(
+		memberItems: sortMembers(
 			state.memberList.memberItems,
 			state.memberList.tracker
 		),

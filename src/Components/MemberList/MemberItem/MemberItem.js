@@ -22,7 +22,11 @@ export const MemberItems = ({ memberItem, onCurrentMember }) => {
 			onClick={() => onCurrentMember(memberItem)}
 			activeClassName={classes.activeDialog}
 			className={classes.MemberItem}>
-			<Avatar image={memberItem.image} alt={memberItem.name} />
+			<Avatar
+				image={memberItem.image}
+				alt={memberItem.name}
+				isOnline={memberItem.isOnline}
+			/>
 			<div className={classes.memberText}>
 				<h4> {memberItem.name} </h4>
 				<p> {sliceText()} </p>

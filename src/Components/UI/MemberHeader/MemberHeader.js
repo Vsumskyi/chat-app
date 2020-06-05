@@ -8,10 +8,9 @@ import { Avatar } from '../Avatar/Avatar'
 export const MemberHeader = ({ user }) => (
 	<div className={classes.MemberHeader}>
 		<div className={classes.memberContacts}>
-			<Avatar image={user.image} alt={user.name} />
+			<Avatar image={user.image} alt={user.name} isOnline={user.isOnline} />
 			<h2>{user.name}</h2>
 		</div>
-
 		<Search />
 	</div>
 )

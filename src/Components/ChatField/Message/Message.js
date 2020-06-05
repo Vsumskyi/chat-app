@@ -8,7 +8,7 @@ export const Message = ({ messageIn, messageOut, image, messageTime }) => {
 	const renderMessage = () =>
 		messageIn && !messageOut ? (
 			<div className={classes.messageIn}>
-				<Avatar image={image} />
+				<Avatar image={image} isOnline={false} />
 				<p>
 					{messageIn}
 					<span>{`${messageTime.date} ${messageTime.time}`}</span>

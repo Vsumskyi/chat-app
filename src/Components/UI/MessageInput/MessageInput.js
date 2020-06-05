@@ -47,5 +47,5 @@ export const MessageInputComponent = ({
 MessageInputComponent.propTypes = {
 	sendMessage: PropTypes.func.isRequired,
 	getMessage: PropTypes.func.isRequired,
-	currentDialogId: PropTypes.string
+	currentDialogId: PropTypes.string.isRequired
 }

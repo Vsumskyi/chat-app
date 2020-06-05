@@ -1,20 +1,20 @@
 @import 'vars.scss';
 
 .FieldHeader {
-  background: $uibgc;
-  width: 100%;
-  position: sticky;
-  left: 0;
-  top: 0;
-  z-index: 99;
-  display: flex;
-  align-items: flex-start;
-  padding: 20px 5px;
-  border-bottom: 1px solid darken($uibgc, 10%);
-  h1 {
-    text-transform: capitalize;
-    font-size: 18px;
-    margin: 0;
-    font-weight: 400;
-  }
+	background: $uibgc;
+	width: 100%;
+	position: sticky;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	display: flex;
+	align-items: flex-start;
+	padding: 20px 5px;
+	border-bottom: 1px solid darken($uibgc, 10%);
+	h1 {
+		text-transform: capitalize;
+		font-size: 18px;
+		margin: 0;
+		font-weight: 400;
+	}
 }

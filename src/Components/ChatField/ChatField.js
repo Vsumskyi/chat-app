@@ -7,36 +7,23 @@ import { Message } from './Message/Message'
 import { MessageInput } from 'Components/UI/MessageInput'
 import { Loader } from 'Components/UI/Loader/Loader'
 
-export const ChatFieldComponent = ({
-	currentDialog,
-	loading,
-	currentMember,
-	memberItems
-}) => {
+export const ChatFieldComponent = ({ currentDialog, loading }) => {
 	const divRref = useRef()
 	useEffect(() => divRref.current.scrollTo(0, 99999), [currentDialog])
-
-	useEffect(() => {
-		currentMember(
-			memberItems.find(i =>
-				window.location.href.split('/dialog/').includes(i.id)
-			)
-		)
-	}, [memberItems, currentMember])
 
 	const renderMessage = () =>
 		currentDialog.history.map((messageInfo, index) =>
 			messageInfo.messageFromMe ? (
 				<Message
-					messageOut={messageInfo.message}
 					key={index}
+					messageOut={messageInfo.message}
 					messageTime={messageInfo.messageTime}
 				/>
 			) : (
 				<Message
+					key={index}
 					messageIn={messageInfo.message}
 					messageTime={messageInfo.messageTime}
-					key={index}
 					image={currentDialog.image}
 				/>
 			)
@@ -44,9 +31,9 @@ export const ChatFieldComponent = ({
 
 	return (
 		<div className={classes.ChatField} ref={divRref}>
-			{!loading ? (
+			{!loading && currentDialog ? (
 				<>
-					<FieldHeader name={currentDialog.name} image={currentDialog.image} />
+					<FieldHeader currentDialog={currentDialog} />
 					<div className={classes.chatContent}>{renderMessage()}</div>
 					<MessageInput currentDialogId={currentDialog.id} />
 				</>
@@ -58,8 +45,6 @@ export const ChatFieldComponent = ({
 }
 
 ChatFieldComponent.propTypes = {
-	currentDialog: PropTypes.object.isRequired,
-	loading: PropTypes.bool.isRequired,
-	memberItems: PropTypes.array.isRequired,
-	currentMember: PropTypes.func.isRequired
+	currentDialog: PropTypes.object || null.isRequired, // await fetch
+	loading: PropTypes.bool.isRequired
 }

@@ -1,0 +1,94 @@
+{
+	"members": [
+		{
+			"id": 1,
+			"name": "Morty Smith",
+			"image": "https://vignette.wikia.nocookie.net/rickandmorty/images/4/41/Morty_Smith.jpg/revision/latest?cb=20200519152019",
+			"history": [
+				{
+					"message": "Hi sister!",
+					"messageFromMe": false,
+					"messageTime": { "date": "6/4/2020", "time": "5:36:04 PM" }
+				}
+			],
+			"sortTime": 1591290361372,
+			"isOnline": true
+		},
+		{
+			"id": 2,
+			"name": "Rick Sanchez",
+			"image": "https://vignette.wikia.nocookie.net/rickandmorty/images/a/a6/Rick_Sanchez.png/revision/latest/scale-to-width-down/620?cb=20160923150728",
+			"history": [
+				{
+					"message": "Summer, Chack Norris is comming for u!",
+					"messageFromMe": false,
+					"messageTime": { "date": "6/4/2020", "time": "5:36:04 PM" }
+				}
+			],
+			"sortTime": 1591290361372,
+			"isOnline": true
+		},
+		{
+			"id": 4,
+			"name": "Beth Smith",
+			"image": "https://vignette.wikia.nocookie.net/rickandmorty/images/5/58/Beth_Smith.png/revision/latest?cb=20191122063320",
+			"history": [
+				{
+					"message": "I love you, daughter :)",
+					"messageFromMe": false,
+					"messageTime": { "date": "6/4/2020", "time": "2:56:04 PM" }
+				}
+			],
+			"sortTime": 1591290361372,
+			"isOnline": true
+		},
+		{
+			"id": 10,
+			"name": "Birdperson",
+			"image": "https://vignette.wikia.nocookie.net/rickandmorty/images/b/b1/Birdperson.png/revision/latest?cb=20140415133633",
+			"history": [
+				{
+					"message": "I`m an eagle!",
+					"messageFromMe": false,
+					"messageTime": { "date": "6/4/2020", "time": "1:36:04 PM" }
+				}
+			],
+			"sortTime": 1591290361372,
+			"isOnline": true
+		},
+		{
+			"id": 11,
+			"name": "Evil Morty",
+			"image": "https://vignette.wikia.nocookie.net/rickandmorty/images/2/23/Evil_Morty_NeverRicking_Morty.jpg/revision/latest/scale-to-width-down/619?cb=20200504100653",
+			"history": [
+				{
+					"message": "Where are you brother?",
+					"messageFromMe": false,
+					"messageTime": { "date": "6/4/2020", "time": "5:36:04 PM" }
+				}
+			],
+			"sortTime": 1591290361372,
+			"isOnline": true
+		},
+		{
+			"id": 12,
+			"name": "Jerry Smith",
+			"image": "https://vignette.wikia.nocookie.net/rickandmorty/images/f/f1/Jerry_Smith.png/revision/latest/scale-to-width-down/620?cb=20160923151111",
+			"history": [
+				{
+					"message": "Hi",
+					"messageFromMe": false,
+					"messageTime": { "date": "6/4/2020", "time": "2:26:04 PM" }
+				}
+			],
+			"sortTime": 1591290361371,
+			"isOnline": true
+		}
+	],
+	"user": {
+		"id": 12,
+		"name": "Summer Smith",
+		"image": "https://vignette.wikia.nocookie.net/rickandmorty/images/a/ad/Summer_is_cool.jpeg/revision/latest/scale-to-width-down/620?cb=20160919183158",
+		"isOnline": true
+	}
+}

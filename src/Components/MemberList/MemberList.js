@@ -15,8 +15,7 @@ export const MemberListComponent = ({
 }) => {
 	useEffect(() => {
 		fetchMembers()
-		// eslint-disable-next-line
-	}, [])
+	}, [fetchMembers])
 
 	const renderMemberItem = () =>
 		memberItems.map(memberItem => (
