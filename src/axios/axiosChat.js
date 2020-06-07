@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 export const axiosBaseUrl = axios.create({
-  baseURL: 'https://chat-ef52a.firebaseio.com/',
+  baseURL: 'https://chat-ef52a.firebaseio.com/'
 })
 
 export const axiosJokeUrl = axios.create({

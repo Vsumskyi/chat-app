@@ -5,12 +5,12 @@ import classes from './FieldHeader.module.scss'
 import { Avatar } from '../Avatar/Avatar'
 
 export const FieldHeader = ({ currentDialog }) => (
-	<div className={classes.FieldHeader}>
-		<Avatar image={currentDialog.image} isOnline={currentDialog.isOnline} />
-		<h1> {currentDialog.name} </h1>
-	</div>
+  <div className={classes.FieldHeader}>
+    <Avatar image={currentDialog.image} isOnline={currentDialog.isOnline} />
+    <h1> {currentDialog.name} </h1>
+  </div>
 )
 
 FieldHeader.propTypes = {
-	currenDialog: PropTypes.object
+  currenDialog: PropTypes.object
 }
